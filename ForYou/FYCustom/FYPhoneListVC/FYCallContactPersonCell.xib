@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FYCallContactPersonCell" rowHeight="55" id="KGk-i7-Jjw" customClass="FYCallContactPersonCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张先生" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-CK-PAv">
+                        <rect key="frame" x="16" y="17.5" width="56" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="caX-vw-u6J"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13002179931" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdW-iO-hms">
+                        <rect key="frame" x="72" y="17" width="93" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="sVg-kp-WKR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.62745098039215685" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-up-e1I">
+                        <rect key="frame" x="276" y="5.5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="20y-FH-3QZ"/>
+                            <constraint firstAttribute="width" constant="44" id="u87-4a-4Xc"/>
+                        </constraints>
+                        <connections>
+                            <action selector="callPhoneNum:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SCx-Nz-b1l"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYu-JR-hdR">
+                        <rect key="frame" x="16" y="54.5" width="288" height="0.5"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="Edy-Rk-afz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NdW-iO-hms" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3Yb-9o-NQa"/>
+                    <constraint firstAttribute="trailing" secondItem="vVL-up-e1I" secondAttribute="trailing" id="N9X-Js-BBe"/>
+                    <constraint firstAttribute="trailing" secondItem="qYu-JR-hdR" secondAttribute="trailing" constant="16" id="UdS-3S-kJj"/>
+                    <constraint firstItem="qYu-JR-hdR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WEI-9L-Osf"/>
+                    <constraint firstItem="qsw-CK-PAv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aIB-zN-7dK"/>
+                    <constraint firstItem="NdW-iO-hms" firstAttribute="leading" secondItem="qsw-CK-PAv" secondAttribute="trailing" id="bem-3O-McY"/>
+                    <constraint firstItem="vVL-up-e1I" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fTt-xy-bgs"/>
+                    <constraint firstAttribute="bottom" secondItem="qYu-JR-hdR" secondAttribute="bottom" id="m72-rG-SdX"/>
+                    <constraint firstItem="qsw-CK-PAv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="nGB-A8-R4V"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="callBtn" destination="vVL-up-e1I" id="TGn-v1-I4v"/>
+                <outlet property="nameLb" destination="qsw-CK-PAv" id="R9g-Rt-74f"/>
+                <outlet property="phoneLb" destination="NdW-iO-hms" id="78B-OB-MOc"/>
+            </connections>
+            <point key="canvasLocation" x="-196" y="46.5"/>
+        </tableViewCell>
+    </objects>
+</document>

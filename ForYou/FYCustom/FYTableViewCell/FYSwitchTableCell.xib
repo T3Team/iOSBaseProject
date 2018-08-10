@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="FYSwitchTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhh-pg-yjz">
+                        <rect key="frame" x="16" y="0.0" width="37.5" height="44.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sp-Ur-kfA">
+                        <rect key="frame" x="255" y="7" width="51" height="31"/>
+                        <connections>
+                            <action selector="valueChange:" destination="KGk-i7-Jjw" eventType="valueChanged" id="EXe-4v-rlG"/>
+                        </connections>
+                    </switch>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVk-AN-PGK" userLabel="lineView">
+                        <rect key="frame" x="16" y="44" width="304" height="0.5"/>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="NVh-4e-sTP"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMustInputMark.png" translatesAutoresizingMaskIntoConstraints="NO" id="EI2-Fc-zKG">
+                        <rect key="frame" x="8" y="19" width="6" height="6"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="2CA-vG-eG6"/>
+                            <constraint firstAttribute="width" constant="6" id="2ol-Ek-Sag"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Qhh-pg-yjz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4gL-Gr-lRP"/>
+                    <constraint firstItem="EI2-Fc-zKG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="BYa-7H-nlW"/>
+                    <constraint firstAttribute="bottom" secondItem="Qhh-pg-yjz" secondAttribute="bottom" id="FbU-y4-0a5"/>
+                    <constraint firstItem="pVk-AN-PGK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="QxY-UE-8Im"/>
+                    <constraint firstAttribute="bottom" secondItem="pVk-AN-PGK" secondAttribute="bottom" id="T1c-UI-enq"/>
+                    <constraint firstItem="EI2-Fc-zKG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WLP-mv-cgG"/>
+                    <constraint firstAttribute="trailing" secondItem="pVk-AN-PGK" secondAttribute="trailing" id="iho-7Y-Xcj"/>
+                    <constraint firstAttribute="trailing" secondItem="5Sp-Ur-kfA" secondAttribute="trailing" constant="16" id="uFz-4g-Aem"/>
+                    <constraint firstItem="Qhh-pg-yjz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vRJ-IZ-vG1"/>
+                    <constraint firstItem="5Sp-Ur-kfA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vkt-xR-zM2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lineView" destination="pVk-AN-PGK" id="gMa-FI-lww"/>
+                <outlet property="mustInputMark" destination="EI2-Fc-zKG" id="OPb-Vg-4eL"/>
+                <outlet property="switchButton" destination="5Sp-Ur-kfA" id="oCP-HX-IyG"/>
+                <outlet property="titleLabel" destination="Qhh-pg-yjz" id="YLn-pW-7fZ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="54.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconMustInputMark.png" width="6" height="6"/>
+    </resources>
+</document>

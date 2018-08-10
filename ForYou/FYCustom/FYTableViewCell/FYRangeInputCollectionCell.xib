@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FYRangeInputCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="168" height="47"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="168" height="47"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="最小" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-I2-zKT">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="47"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="最大" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2q-gE-ipW">
+                        <rect key="frame" x="88" y="0.0" width="80" height="47"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-jz-wLv">
+                        <rect key="frame" x="81" y="23" width="6" height="1"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="6" id="CfN-iZ-Rcc"/>
+                            <constraint firstAttribute="height" constant="1" id="Oug-vM-u0F"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="hXs-I2-zKT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0iG-1r-1cK"/>
+                <constraint firstItem="N2q-gE-ipW" firstAttribute="leading" secondItem="wbv-jz-wLv" secondAttribute="trailing" constant="1" id="7wm-kJ-qeE"/>
+                <constraint firstItem="wbv-jz-wLv" firstAttribute="leading" secondItem="hXs-I2-zKT" secondAttribute="trailing" constant="1" id="A40-6h-4by"/>
+                <constraint firstItem="N2q-gE-ipW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IpI-CX-xAR"/>
+                <constraint firstItem="N2q-gE-ipW" firstAttribute="width" secondItem="hXs-I2-zKT" secondAttribute="width" id="ald-2D-KnW"/>
+                <constraint firstAttribute="trailing" secondItem="N2q-gE-ipW" secondAttribute="trailing" id="haZ-Wc-fTv"/>
+                <constraint firstItem="hXs-I2-zKT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ncE-ck-Or0"/>
+                <constraint firstItem="wbv-jz-wLv" firstAttribute="leading" secondItem="hXs-I2-zKT" secondAttribute="trailing" constant="1" id="ngL-2F-dmT"/>
+                <constraint firstItem="N2q-gE-ipW" firstAttribute="leading" secondItem="wbv-jz-wLv" secondAttribute="trailing" constant="1" id="pf0-q0-is2"/>
+                <constraint firstItem="wbv-jz-wLv" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="rSU-u3-0Rh"/>
+                <constraint firstAttribute="bottom" secondItem="N2q-gE-ipW" secondAttribute="bottom" id="uBq-pe-VhC"/>
+                <constraint firstAttribute="bottom" secondItem="hXs-I2-zKT" secondAttribute="bottom" id="uvi-17-itl"/>
+            </constraints>
+            <size key="customSize" width="208" height="47"/>
+            <connections>
+                <outlet property="lineView" destination="wbv-jz-wLv" id="7d3-Ag-y80"/>
+                <outlet property="maxTextField" destination="N2q-gE-ipW" id="pUm-CQ-HmV"/>
+                <outlet property="minTextField" destination="hXs-I2-zKT" id="11y-Nu-6WN"/>
+            </connections>
+            <point key="canvasLocation" x="22" y="56.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

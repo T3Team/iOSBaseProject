@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kFYPhotoItemCollectionCellID" id="gTV-IL-0wX" customClass="FYPhotoItemCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_default.png" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-lX-cgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2e-hf-tMt">
+                        <rect key="frame" x="0.0" y="46" width="68" height="22"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="IIH-IE-lKt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="tEH-lX-cgJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6lp-ft-l42"/>
+                <constraint firstItem="tEH-lX-cgJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8ou-ED-huS"/>
+                <constraint firstAttribute="bottom" secondItem="tEH-lX-cgJ" secondAttribute="bottom" id="Mrb-LM-DtH"/>
+                <constraint firstAttribute="trailing" secondItem="tEH-lX-cgJ" secondAttribute="trailing" id="Pmu-Qw-JWY"/>
+                <constraint firstAttribute="trailing" secondItem="l2e-hf-tMt" secondAttribute="trailing" id="Qg3-lu-vO8"/>
+                <constraint firstAttribute="bottom" secondItem="l2e-hf-tMt" secondAttribute="bottom" id="WJB-MS-okQ"/>
+                <constraint firstItem="l2e-hf-tMt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rQL-jd-Ugd"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="tEH-lX-cgJ" id="cEJ-Xz-X2L"/>
+                <outlet property="tagLabel" destination="l2e-hf-tMt" id="AKC-AL-6WZ"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="list_default.png" width="190" height="142"/>
+    </resources>
+</document>

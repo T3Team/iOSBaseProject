@@ -1,0 +1,71 @@
+
+房友项目介绍:
+   1、项目使用MVC设计框架
+   2、三方库使用cocoapods管理 部分三方库不支持cocoapods管理的，将这些库原SDK文件存放在
+      FYThirdFrameworks中
+   3、避免直接使用三方库的功能，三方需要进行再封装，再封装类存放于FYComponent分组中
+   4、头文件注释中应包含类简介，对外公开的方法属性必须有注释，增加分组时及时维护说明文件
+   5、项目采用国际化方式，避免直接赋值 <该内容暂不做要求>
+
+
+分组介绍：
+   1、FYApp: FYAppDelegate、设备/APP信息单例、路由 等
+   2、FYHeader: 全局 头文件、颜色值定义、图片、字体图片、字体、宏定义 等
+   3、FYCategory: 系统类的分类
+   4、FYCustom: 自己封装的类：包括FYBaseViewController 以及常用效果的封装
+   5、FYComponent: 三方库的再封装(尽可能不要在项目中直接使用三方库，复用率较高的一定要进行再封装后再使用)
+   6、FYPersistence: 持久化方案管理 NSUserDefaults等统一管理
+   7、FYAPIManager: 公用API请求管理类(同一个API在超过一个类中使用的)
+   8、FYModel: 公用数据模型类（同一个数据模型在超过一个类中使用的）
+   9、FYResources: 图片资源、ttf、gif、国际化相关文件
+   10、FYThirdFrameworks: 三方库中不支持pod管理的库
+   11、FYRoot: app的根控制器(UITabBarController)
+   12、FYHome: 首页-控制台 相关功能
+   13、FYHouse: 房源分组：包括二手房/租房的列表查看，房源详情、新增房源、新房、新房报备等功能
+   14、FYClientSource: 客源目录：客源列表、客源详情、录入带看、选择房源
+   15、FYMessage: 消息
+   16、FYMy: 个人中心: 包括个人信息、设置、关注列表等功能
+   17、FYLoginRegister: 登录注册
+   18、FYDemo: 自定义公共模块：仿朋友圈、公共的View、即时通讯 等功能使用Demo
+   19、FYNewHouseAccount：新房账号独有的模块：新房账号的统计、新房账号下的我的
+
+
+
+开发流程及代码规范：
+一、前缀:
+   1、所有的类(分类除外)加上 FY 前缀
+   2、所有的基类加上 FYBase 前缀
+   3、FYHeader分组下各个头文件中命名请按照已有实例规范增加前缀
+二、命名规范:
+   1、除宏定义外，采用驼峰命名法；
+   2、所有宏定义写到对应的头文件中，命名方式参照各自规则。例如FYColors.h中采用color_前缀，FYImages.h采用  
+     image_前缀；
+三、宏、图片、颜色值、国际化等开发流程及规范：
+   1、国际化：项目中避免直接赋值，在Localizable.strings定义键值，注意键名不要与已有键名重复；
+   2、本地图片：将图片存放在对应的资源文件夹中，并在FYImages.h增加对应的宏后再使用；
+   3、Iconfont图片：在FYIconFonts.h中增加对应的宏后再使用；
+   4、颜色值：在FYColors.h中增加对应的宏再使用；
+   5、全局宏定义及三方账号信息：在FYDefines.h中增加对应的宏再使用；
+四、代码注释要求：
+   1、所有注释需要按照苹果官方注释要求；
+   2、所有新增类需要在对应的.h文件中需要增加功能说明；
+   3、所有.h文件中的对外的属性方法以及协议中的方法需要添加注释；
+   4、所有model中的属性需要添加注释。
+   
+代码Review要求：
+   1、代码Review在项目正式开始后，以周或者版本提交为节点，按人员环式分工；
+   2、Review的代码是否符合上述分组介绍、开发流程及代码规范中的各项要求；
+   3、能读懂Review的代码，保证在没有相关人员的配合下，能独立维护Review过的代码；
+   4、按测试人员的要求对Review的代码功能及性能进行测试，在Review过程中及时将BUG反馈给对应开发者，并监督开发者尽快修复BUG。
+
+
+注意事项：
+一、pods内容已经在gitignore中忽略，不上传pod中的代码。clone后 pod install，如碰见
+   pod install出现异常情况，可使用pod update再试一次。
+
+
+账号：
+Growingio :app_work@fangyou.com
+	   fangyou2018
+
+

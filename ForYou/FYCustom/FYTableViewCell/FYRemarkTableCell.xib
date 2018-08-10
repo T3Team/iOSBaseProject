@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="260" id="KGk-i7-Jjw" customClass="FYRemarkTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="259.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-ny-ZGb">
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="45"/>
+                        <subviews>
+                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Km-ro-BRg">
+                                <rect key="frame" x="16" y="0.0" width="27" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Km-ro-BRg" firstAttribute="top" secondItem="hdg-ny-ZGb" secondAttribute="top" id="hk1-S1-Rgf"/>
+                            <constraint firstAttribute="bottom" secondItem="1Km-ro-BRg" secondAttribute="bottom" id="iSs-lw-OBe"/>
+                            <constraint firstItem="1Km-ro-BRg" firstAttribute="leading" secondItem="hdg-ny-ZGb" secondAttribute="leading" constant="16" id="o1p-XZ-n4x"/>
+                            <constraint firstAttribute="height" constant="45" id="xfv-fh-HXF"/>
+                        </constraints>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PXV-js-Tge" customClass="FYPlaceholderTextView">
+                        <rect key="frame" x="16" y="45" width="317" height="194"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PXV-js-Tge" firstAttribute="top" secondItem="hdg-ny-ZGb" secondAttribute="bottom" id="1Lv-hg-935"/>
+                    <constraint firstAttribute="trailing" secondItem="PXV-js-Tge" secondAttribute="trailing" constant="16" id="3za-QU-zhb"/>
+                    <constraint firstItem="hdg-ny-ZGb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VEJ-bs-s7O"/>
+                    <constraint firstAttribute="bottom" secondItem="PXV-js-Tge" secondAttribute="bottom" constant="20" id="dVH-7n-l2L"/>
+                    <constraint firstAttribute="trailing" secondItem="hdg-ny-ZGb" secondAttribute="trailing" id="ghP-EP-h9b"/>
+                    <constraint firstItem="hdg-ny-ZGb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gx1-Ot-lKO"/>
+                    <constraint firstItem="PXV-js-Tge" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tKW-uc-ECK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="remarkTextView" destination="PXV-js-Tge" id="1SA-Di-lnL"/>
+                <outlet property="titleLabel" destination="1Km-ro-BRg" id="vyZ-55-GrD"/>
+            </connections>
+            <point key="canvasLocation" x="48.5" y="166"/>
+        </tableViewCell>
+    </objects>
+</document>

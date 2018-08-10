@@ -1,0 +1,42 @@
+//
+//  FYBaseAPIManager.h
+//  ForYou
+//
+//  Created by marcus on 2017/7/28.
+//  Copyright © 2017年 ForYou. All rights reserved.
+//  国际化 中文语言
+
+
+"SelectServerConfiguration"              = "请选择服务器地址(仅在Debug模式下设置)";
+"ReleaseServer"                          = "线上环境";
+"DevServer"                              = "开发环境";
+"TestServer"                             = "测试环境";
+"PreServer"                              = "预发环境";
+"APIManagerErrorTypeDefault"             = "网络请求错误，请检查网络";
+"APIManagerErrorTypeNoNetwork"           = "网络请求错误，请检查网络";
+"APIManagerErrorTypeTimeout"             = "网络请求超时，请检查网络";
+"APIManagerErrorTypeParamsError"         = "参数错误，请求失败";
+"APIManagerErrorTypeInvalidURL"          = "无效的URL，请求失败";
+"APIManagerErrorTypeNoHost"              = "服务器异常，请求失败";
+"APIManagerErrorTypeCancelled"           = "取消网络请求，请求失败";
+"APIManagerErrorTypeUnknown"             = "未知错误，请求失败";
+
+"Login"                                  = "登录";
+
+"NetWorkRequestFail"                     = "网络请求失败";
+"NoData"                                 = "没有数据";
+
+
+"MessageList"                            = "消息";
+"EstateList"                             = "房源";
+"Workbench"                              = "首页";
+"PassengerList"                          = "客源";
+"My"                                     = "我的";
+"Property"                               = "楼盘";
+"Statistics"                             = "统计";
+"Report"                                 = "报备";
+
+"AddSellHouse"                           = "新增售房";
+"AddRentHouse"                           = "新增租房";
+
+"WordCountOut"                           = "输入内容超限了";

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="FYEditSelectedStateCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开盘时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tId-QX-gIP">
+                        <rect key="frame" x="16" y="15" width="57.5" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="wF3-of-UrH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="开盘日期" placeholder="请输入开盘时间" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DN0-05-RnF">
+                        <rect key="frame" x="16" y="41.5" width="319" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="42Y-dN-CjS"/>
+                        </constraints>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybh-Ue-18Q">
+                        <rect key="frame" x="323" y="12" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="UvU-cZ-yxZ"/>
+                            <constraint firstAttribute="width" constant="52" id="kon-6G-p2D"/>
+                        </constraints>
+                        <state key="normal" image="icon_wxdx_40.png"/>
+                        <connections>
+                            <action selector="clickSelectedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0Ih-Tv-C6G"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tq7-by-w76" userLabel="line">
+                        <rect key="frame" x="16" y="77" width="359" height="1"/>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="qbE-Ih-bim"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="DN0-05-RnF" secondAttribute="trailing" constant="40" id="6ae-kN-ZrY"/>
+                    <constraint firstItem="tId-QX-gIP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9ua-i0-tdc"/>
+                    <constraint firstAttribute="trailing" secondItem="tq7-by-w76" secondAttribute="trailing" id="HQj-Jv-yDw"/>
+                    <constraint firstItem="tId-QX-gIP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="J0M-24-cNJ"/>
+                    <constraint firstAttribute="bottom" secondItem="tq7-by-w76" secondAttribute="bottom" id="Qqg-e3-DF4"/>
+                    <constraint firstAttribute="trailing" secondItem="Ybh-Ue-18Q" secondAttribute="trailing" id="aKq-oV-vtd"/>
+                    <constraint firstItem="DN0-05-RnF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="awf-ee-r86"/>
+                    <constraint firstAttribute="bottom" secondItem="DN0-05-RnF" secondAttribute="bottom" constant="16" id="dRb-3N-LMP"/>
+                    <constraint firstItem="Ybh-Ue-18Q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ent-Hr-Nee"/>
+                    <constraint firstItem="tq7-by-w76" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kxe-vL-Q1E"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="inputTextField" destination="DN0-05-RnF" id="rLf-hA-1nR"/>
+                <outlet property="line" destination="tq7-by-w76" id="a0r-I5-V5c"/>
+                <outlet property="selectedButton" destination="Ybh-Ue-18Q" id="C8g-rL-0dv"/>
+                <outlet property="titleLabel" destination="tId-QX-gIP" id="qo1-B6-ESP"/>
+            </connections>
+            <point key="canvasLocation" x="61.5" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_wxdx_40.png" width="20" height="20"/>
+    </resources>
+</document>
